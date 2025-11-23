@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Path to Success</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #7B9FE8 0%, #8EABE8 100%);
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 420px;
+            margin: 0 auto;
+            background: #5875D3;
+        }
+
+        /* Header */
+        .header {
+            background: #5875D3;
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .header p {
+            font-size: 15px;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        /* Menu */
+        .menu {
+            background: #F4C053;
+            padding: 25px 20px;
+        }
+
+        .menu-title {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: #333;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }
+
+        .menu-item {
+            background: white;
+            padding: 13px;
+            margin-bottom: 10px;
+            text-align: center;
+            font-weight: bold;
+            color: #5875D3;
+            cursor: pointer;
+            font-size: 13px;
+            letter-spacing: 0.3px;
+        }
+
+        .menu-item:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Services Section */
+        .services-section {
+            background: #5875D3;
+            padding: 30px 20px;
+        }
+
+        .section-title {
+            color: white;
+            font-size: 26px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .section-subtitle {
+            color: #F4C053;
+            font-size: 19px;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 18px;
+        }
+
+        .service-icon {
+            font-size: 45px;
+            margin-bottom: 12px;
+        }
+
+        .service-title {
+            color: #5875D3;
+            font-weight: bold;
+            margin-bottom: 12px;
+            font-size: 17px;
+        }
+
+        .service-description {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Why Choose Us */
+        .why-choose {
+            background: #E85D74;
+            padding: 30px 20px;
+        }
+
+        .why-title {
+            color: white;
+            font-size: 26px;
+            margin-bottom: 18px;
+            font-weight: bold;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .why-item {
+            padding: 25px 15px;
+            text-align: center;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 1.3;
+        }
+
+        .why-item:nth-child(1) {
+            background: #5DC4BA;
+            color: #333;
+        }
+
+        .why-item:nth-child(2) {
+            background: #7B9FE8;
+            color: white;
+        }
+
+        .why-item:nth-child(3) {
+            background: #F4C053;
+            color: #333;
+        }
+
+        .why-item:nth-child(4) {
+            background: #F5A5BA;
+            color: #333;
+        }
+
+        /* Pricing */
+        .pricing-section {
+            background: #5875D3;
+            padding: 30px 20px;
+        }
+
+        .pricing-title {
+            color: white;
+            font-size: 26px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .pricing-category {
+            margin-bottom: 25px;
+        }
+
+        .pricing-category-title {
+            color: #F4C053;
+            font-size: 19px;
+            margin-bottom: 12px;
+            font-weight: normal;
+        }
+
+        .pricing-header {
+            display: flex;
+            justify-content: space-between;
+            background: #F4C053;
+            padding: 10px 18px;
+            font-weight: bold;
+            margin-bottom: 2px;
+            font-size: 14px;
+        }
+
+        .pricing-row {
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            padding: 12px 18px;
+            background: rgba(0,0,0,0.1);
+            margin-bottom: 2px;
+            font-size: 14px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: #E85D74;
+            padding: 35px 25px;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 18px;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .cta-section p {
+            color: white;
+            margin-bottom: 25px;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .cta-button {
+            background: white;
+            color: #E85D74;
+            padding: 16px 40px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+            width: 85%;
+            letter-spacing: 0.5px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #3D5AA8;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 12px;
+        }
+
+        .footer a {
+            color: #F4C053;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Path to Success</h1>
+            <p>Unlock your full potential</p>
+        </div>
+
+        <!-- Menu -->
+        <div class="menu">
+            <div class="menu-title">MENU</div>
+            <div class="menu-item">OUR SERVICES</div>
+            <div class="menu-item">WHY CHOOSE US</div>
+            <div class="menu-item">PRICES</div>
+            <div class="menu-item">TAKE THE FIRST STEP</div>
+        </div>
+
+        <!-- Our Services -->
+        <div class="services-section">
+            <h2 class="section-title">Our Services</h2>
+            <h3 class="section-subtitle">One-on-One Coaching</h3>
+
+            <div class="service-card">
+                <div class="service-icon">😊</div>
+                <div class="service-title">Personal Development</div>
+                <div class="service-description">
+                    Identify and overcome obstacles holding you back from living your own life. Whether it's building confidence, breaking bad habits, or strengthening your mindset, we'll work together to create a clear roadmap for success.
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">💼</div>
+                <div class="service-title">Career Coaching</div>
+                <div class="service-description">
+                    Feeling stuck in your career? We'll help you clarify your goals, enhance career skills, and navigate transitions—whether you're looking to thrive in your professional life.
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">❤️</div>
+                <div class="service-title">Relationship Coaching</div>
+                <div class="service-description">
+                    Build stronger, healthier relationships through better communication, understanding, and empathy. Whether it's family, friends, or partners, we'll help you create deeper connections.
+                </div>
+            </div>
+
+            <h3 class="section-subtitle">Group Coaching</h3>
+
+            <div class="service-card">
+                <div class="service-icon">🙌</div>
+                <div class="service-title">Supportive Community</div>
+                <div class="service-description">
+                    Join a group of like-minded individuals on a similar journey. Share experiences, gain insights, and support each other in a supportive environment.
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">⚙️</div>
+                <div class="service-title">Focused Sessions</div>
+                <div class="service-description">
+                    Engaging teaching sessions built on specific themes such as confidence-building, time management, or work-life balance. Each session offers actionable strategies and takeaways that you can apply immediately.
+                </div>
+            </div>
+
+            <h3 class="section-subtitle">Workshops & Seminars</h3>
+
+            <div class="service-card">
+                <div class="service-icon">🎓</div>
+                <div class="service-title">Interactive Learning</div>
+                <div class="service-description">
+                    Participate in our interactive workshops and seminars designed around real-life scenarios. Here you'll practice new skills in a safe environment, giving you hands-on experience and strategies that you can implement in your daily life.
+                </div>
+            </div>
+
+            <h3 class="section-subtitle">Online Courses</h3>
+
+            <div class="service-card">
+                <div class="service-icon">💻</div>
+                <div class="service-title">Flexible Learning</div>
+                <div class="service-description">
+                    Access our online courses at your convenience. With video lessons, downloadable resources, and quizzes, you can learn at your own pace from the comfort of your home.
+                </div>
+            </div>
+        </div>
+
+        <!-- Why Choose Us -->
+        <div class="why-choose">
+            <h2 class="why-title">Why Choose Us</h2>
+            <div class="why-grid">
+                <div class="why-item">Personalized<br>Approach</div>
+                <div class="why-item">Proven Results</div>
+                <div class="why-item">Supportive<br>Environment</div>
+                <div class="why-item">Flexible Options</div>
+            </div>
+        </div>
+
+        <!-- Pricing -->
+        <div class="pricing-section">
+            <h2 class="pricing-title">Pricing</h2>
+            
+            <div class="pricing-category">
+                <h3 class="pricing-category-title">One-on-One Coaching</h3>
+                <div class="pricing-header">
+                    <span>SERVICE</span>
+                    <span>COST</span>
+                </div>
+                <div class="pricing-row">
+                    <span>Single Session</span>
+                    <span>$100</span>
+                </div>
+                <div class="pricing-row">
+                    <span>Monthly Package</span>
+                    <span>$350</span>
+                </div>
+                <div class="pricing-row">
+                    <span>3 month Package</span>
+                    <span>$900</span>
+                </div>
+            </div>
+
+            <div class="pricing-category">
+                <h3 class="pricing-category-title">Group Coaching</h3>
+                <div class="pricing-header">
+                    <span>SERVICE</span>
+                    <span>COST</span>
+                </div>
+                <div class="pricing-row">
+                    <span>Single Session</span>
+                    <span>$75</span>
+                </div>
+                <div class="pricing-row">
+                    <span>Monthly Package</span>
+                    <span>$250</span>
+                </div>
+            </div>
+
+            <div class="pricing-category">
+                <h3 class="pricing-category-title">Workshops & Seminars</h3>
+                <div class="pricing-header">
+                    <span>SERVICE</span>
+                    <span>COST</span>
+                </div>
+                <div class="pricing-row">
+                    <span>Single Workshop</span>
+                    <span>$150</span>
+                </div>
+                <div class="pricing-row">
+                    <span>Seminar Series</span>
+                    <span>$400</span>
+                </div>
+            </div>
+
+            <div class="pricing-category">
+                <h3 class="pricing-category-title">Online Courses</h3>
+                <div class="pricing-header">
+                    <span>SERVICE</span>
+                    <span>COST</span>
+                </div>
+                <div class="pricing-row">
+                    <span>Full Course</span>
+                    <span>$200</span>
+                </div>
+                <div class="pricing-row">
+                    <span>Monthly Series</span>
+                    <span>$250</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h2>Take the First Step Today</h2>
+            <p>Your journey to a more fulfilling life begins with a single step. Book a free 30-minute consultation today to discover how our coaching can help you reach your goals and unlock the life you've always dreamed of.</p>
+            <button class="cta-button">SCHEDULE NOW</button>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            Copyright 2024 · <a href="#">Terms and Conditions</a>
+        </div>
+    </div>
+</body>
+</html>
